@@ -1,0 +1,23 @@
+<div class="side-bar" [ngClass]="collapsed ? 'side-bar-collapsed' : ''">
+    <ul class="sidenav-nav">
+        <li style="margin-bottom: 40px;">
+            <!-- <span class="material-symbols-outlined menu-toogle-icon" style="color: #0c6259;" *ngIf="!collapsed" (click)="collapsed = !collapsed">
+                menu
+            </span>
+            <span class="material-symbols-outlined menu-toogle-icon" style="color: #0c6259;" *ngIf="collapsed" (click)="collapsed = !collapsed">
+                menu_open
+            </span> -->
+            <img class="menu-toogle-icon" src="assets/menu_open.png" *ngIf="!collapsed" (click)="collapsed = !collapsed">
+            <img class="menu-toogle-icon" src="assets/menu_collapsed.png" *ngIf="collapsed" (click)="collapsed = !collapsed">
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let menu of menus" style="margin-bottom: 40px;">
+            <a class="sidenav-nav-link" [routerLink]="[menu.routerLink]" routerLinkActive="active">
+                <!-- <i class="sidenav-link-icon" [class]="menu.icon"></i> -->
+                <img class="icon" [src]="menu.icon">
+                <span class="sidenav-link-text" *ngIf="!collapsed">
+                    {{menu.label}}
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

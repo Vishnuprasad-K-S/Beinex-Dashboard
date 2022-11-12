@@ -1,0 +1,171 @@
+<div class="container-fluid home">
+    <div class="row py-3">
+        <div class="col">
+            <div class="card">
+                <div class="position-absolute top-0 end-0">
+                    <span class="material-symbols-outlined mx-2 mt-1" style="color: gray;">
+                        more_horiz
+                    </span>
+                </div>
+                <div class="container g-0 p-2 h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-auto first-card-digit">
+                            45
+                        </div>
+                        <div class="col p-0 first-card-text">
+                            Total number of tasks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="position-absolute top-0 end-0">
+                    <span class="material-symbols-outlined mx-2 mt-1" style="color: gray;">
+                        more_horiz
+                    </span>
+                </div>
+                <div class="container g-0 p-2 h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-auto first-card-digit">
+                            <div class="progress green">
+                                <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <div class="progress-value">14</div>
+                            </div>
+                            <div class="percentage">54%</div>
+                        </div>
+                        <div class="col p-0 first-card-text">
+                            Number of Tasks on Track
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="position-absolute top-0 end-0">
+                    <span class="material-symbols-outlined mx-2 mt-1" style="color: gray;">
+                        more_horiz
+                    </span>
+                </div>
+                <div class="container g-0 p-2 h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-auto first-card-digit">
+                            <div class="progress yellow">
+                                <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <div class="progress-value">8</div>
+                            </div>
+                            <div class="percentage">30%</div>
+                        </div>
+                        <div class="col p-0 first-card-text">
+                            Number of Tasks Delayed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="position-absolute top-0 end-0">
+                    <span class="material-symbols-outlined mx-2 mt-1" style="color: gray;">
+                        more_horiz
+                    </span>
+                </div>
+                <div class="container g-0 p-2 h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-auto first-card-digit">
+                            <div class="progress red">
+                                <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <div class="progress-value">4</div>
+                            </div>
+                            <div class="percentage">16%</div>
+                        </div>
+                        <div class="col p-0 first-card-text">
+                            Total number of tasks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="position-absolute top-0 end-0">
+                    <span class="material-symbols-outlined mx-2 mt-1" style="color: gray;">
+                        more_horiz
+                    </span>
+                </div>
+                <div class="container g-0 p-2 h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-auto first-card-digit">
+                            <div class="progress blue">
+                                <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <div class="progress-value">19</div>
+                            </div>
+                            <div class="percentage">19%</div>
+                        </div>
+                        <div class="col p-0 first-card-text">
+                            Total number of tasks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content graph -->
+
+    <div class="row mt-2">
+        <div class="col-sm-4">
+            <div class="chart-title">Task Distribution</div>
+            <div class="row legend">
+                <div class="col" style="font-size: 10pt;">
+                    <div class="colour-scheme" style="background-color: #5E9EA8;"></div> Chairman office
+                </div>
+                <div class="col" style="font-size: 10pt;">
+                    <div class="colour-scheme" style="background-color: #93B2B6;"></div> DOH Sector
+                </div>
+            </div>
+            <figure id="donut" style="height: 300px; width: 300px;"></figure>
+        </div>
+        <div class="col-sm-4">
+            <div class="chart-title">Task by Beinex Sectors</div>
+            <!-- <div>
+                <svg id="stackedBar" width="200" height="150"></svg>
+            </div> -->
+            <div class="mt-3">
+                <p-chart type="bar" [data]="beinexData" [options]="stackedOptions"></p-chart>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="chart-title">Task by Auraa</div>
+            <!-- <div class="chart-container"></div>
+            <div class="chart-legend-container"></div> -->
+
+            <!-- <div id='stacked-bar'></div> -->
+            <div class="mt-3">
+                <p-chart type="bar" [data]="auraaData" [options]="stackedOptions"></p-chart>
+            </div>
+        </div>
+    </div>
+</div>
